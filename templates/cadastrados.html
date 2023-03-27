@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastros Convenção</title>
+  <link href="static/style.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+  <!-- Header -->
+  <div id="header">
+        <ul id="header-list">
+            <li class="header-item"><a href="/">Home</a></li>
+            <li class="header-item"><a href="/cadastros">Cadastros</a></li>
+        </ul>
+    </div>
+  <div id="container">
+    <table>
+          <tr>
+            <th> ID </th>
+            <th> Código </th>
+            <th> Nome </th>
+            <th> Fluxo </th>
+            <th> Data e Hora </th>
+            <th> Deletar </th>
+          </tr>
+      {% block content %}
+        {% for i in cadastros %}
+          <tr>
+            <td> {{ i.id }} </td>
+            <td> {{ i.number }} </td>
+            <td> {{ i.name }} </td>
+            <td> {{ i.fluxo }} </td>
+            <td> {{ i.datetime }} </td>
+            <td align="center"><a href="/delete/{{i.id}}">✖</a></td>
+          </tr>
+        {% endfor %}
+      {% endblock %}
+    </table>
+  </div>
+</body>
+
+</html>

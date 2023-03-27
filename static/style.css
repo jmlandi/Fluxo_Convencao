@@ -1,0 +1,110 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: arial, sans-serif;
+  list-style: none;
+  font-style: none;
+  text-decoration: none;
+}
+
+
+#header,
+#header ul {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#header ul {
+  padding: 10px;
+  background-color: #ededed;
+}
+
+.header-item a {
+  font-style: none;
+  color: #000;
+}
+
+.header-item a:hover {
+  color: #1d1b1b;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+#entrada-dados {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+
+#entrada-dados form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#entrada-dados form input,
+#entrada-dados form select,
+#entrada-dados form button {
+  width: 350px;
+  padding: 20px;
+  margin: 3px;
+}
+
+#entrada-dados form p {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+#entrada-dados form button {
+  margin-top: 14px;
+  background-color: #14a932;
+  transition: background 0.3s ease-in-out;
+}
+
+#entrada-dados form button:hover {
+  color: #fff;
+  background-color: #171616;
+  transition: background 0.3s ease-in-out;
+}
+
+#cadastrado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+#cadastrado p {
+  font-size: 14px;
+}
+
+.flash {
+ font-weight: 700;
+}
+
+#container table {
+  border: 3px solid black;
+  padding: 20px;
+  border-radius: 7px;
+}
+
+#container table tr,
+#container table, td {
+  padding: 7px;
+  border: 1px solid black;
+}

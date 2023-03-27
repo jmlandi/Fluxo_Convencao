@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastros Convenção</title>
+  <link href="static/style.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+  <!-- header -->
+  <div id="header">
+        <ul id="header-list">
+            <li class="header-item"><a href="/">Home</a></li>
+            <li class="header-item"><a href="/cadastros">Cadastros</a></li>
+        </ul>
+    </div>
+  <!-- /header -->
+  <!-- container -->
+  <div id="container">
+    <div id="entrada-dados">
+      <form action="/create" method="POST">
+        <p>Fluxo:</p>
+        <select name="fluxo"><option value="entrada">Entrada</option><option value="saida" selected>Saída</option></select>
+        <p>Código do crachá:</p>
+        <input id="digite" type="txt" name="number" placeholder="Coloque o número">
+        <button type="submit" name="submit"> Concluir </button>
+      </form>
+    </div>
+    <div id="cadastrado">
+      {% block content %}
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            {% for msg in messages %}
+            <p>Último cadastro:</p>
+            <div class="flash">
+                  {{ msg }}
+            </div>
+            {% endfor %}
+          {% endif %}
+        {%endwith %}
+      {% endblock %}
+    </div>
+  </div>
+  <!-- /container -->
+</body>
+
+</html>
